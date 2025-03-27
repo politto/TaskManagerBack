@@ -26,6 +26,14 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+## Back-end key architectural decisions
+  1. Structure design
+    Designed along with Controller-Mervice-Model-Repository seperation priciple, this will also assist the best practice principle.
+  2. Table & Object design
+    2 object designed and linked to database, Tasks and Users. And obviously the password field in Users is hashed + salted with Bcrypt(light and popular hasing algorithm) library.
+  3. Authentication
+    Using JWT only access token that have 3600s in its lifetime, because the app itself is so simple. So refresh token may not necessary.
 ## Project setup
 
 ```bash
@@ -37,6 +45,8 @@ $ npm install
 ```bash
 # development
 $ npm run start
+#or
+$ bun start
 
 # watch mode
 $ npm run start:dev
