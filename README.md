@@ -26,7 +26,7 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-
+## INFORMATION WROTE BY AUTHOR(Nattaphat.S)
 ## Back-end key architectural decisions
   1. Structure design
     Designed along with Controller-Mervice-Model-Repository seperation priciple, this will also assist the best practice principle.
@@ -40,7 +40,7 @@
 $ npm install
 ```
 
-## Compile and run the project
+## Compile and run the project(normal ver.)
 
 ```bash
 # development
@@ -55,6 +55,17 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Compile and run the project(docker)
+
+```bash
+# cd to project directory first
+$ docker build -t taskmanagerbackend:1.0 -f .\Dockerfile .
+
+$ docker run -p 3000:3000 --env-file .env taskmanagerbackend:1.0
+
+#and enjoy!
+```
+
 ## Run tests
 
 ```bash
@@ -67,7 +78,7 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
+## *Auto generated text below*
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
