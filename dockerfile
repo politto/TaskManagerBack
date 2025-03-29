@@ -15,7 +15,8 @@ COPY package*.json ./
 # COPY tsconfig.json ./
 
 # Install dependencies
-RUN npm ci && npm rebuild bcrypt --build-from-source
+RUN npm ci
+RUN npm install bcrypt --save
 
 EXPOSE 3000
 
